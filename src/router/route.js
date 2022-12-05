@@ -21,4 +21,8 @@ router.post("/books/:bookId/review",reviewController.createReview)
 router.put("/books/:bookId/review/:reviewId",reviewController.updatedReview)
 router.delete("/books/:bookId/review/:reviewId",reviewController.deleteReview)
 
+router.all("*", (req, res) => {
+    res.status(404).send(`Cannot find ${req.originalUrl}`);
+  });
+
 module.exports = router
