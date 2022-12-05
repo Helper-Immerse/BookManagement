@@ -24,10 +24,6 @@ const bookSchema = new mongoose.Schema({
         required: true,
         unqiue: true, trim: true
     },
-    bookImage:{
-        type:String,
-        required:true
-    },
     category: {
         type: String,
         required: true, trim: true
