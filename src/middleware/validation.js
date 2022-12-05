@@ -51,7 +51,7 @@ const  isValidObjectId =function(id){
 
 //ISBN Validation
 const isValidISBN =function(ISBN){
-    const  dateRegex =/^\+?([1-9]{3})\)?[-. ]?([0-9]{10})$/
+    const  dateRegex =/^[\d*\-]{10}|[\d*\-]{13}$/
     return dateRegex.test(ISBN)
 }
 
